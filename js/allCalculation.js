@@ -30,7 +30,7 @@ function toShow(sum,particularUnitName)
     // console.log(updateBoxValue)
     sumNumber = parseFloat(sum);
     sumNumber = sumNumber.toFixed(2);
-    updateBoxName.innerText = sumNumber+"TK";
+    updateBoxName.innerText = sumNumber+" TK";
     const ItemName = document.getElementById("NameInput");
     // console.log(particularUnitName)
     const count = ItemName.childElementCount;
@@ -55,7 +55,7 @@ function toShowDiscount(discount)
     const updateBoxValue2 = updateBoxName2.innerText;
     // console.log(updateBoxValue2)
     discount = discount.toFixed(2);
-        updateBoxName2.innerText = discount+"TK";
+        updateBoxName2.innerText = discount+" TK";
 }
 
 function InputValue()
@@ -107,6 +107,7 @@ function toShowTotal(AfterDiscountPrice)
 function ShowFinalPrice(OverallPrice)
 {
     const TotalPriceString = document.getElementById("TotalPrice");
+    OverallPrice = OverallPrice.toFixed(2);
     const TotalPrice = TotalPriceString.innerText;
-    TotalPriceString.innerText = OverallPrice + "TK";
+    TotalPriceString.innerText = OverallPrice + " TK";
 } 
