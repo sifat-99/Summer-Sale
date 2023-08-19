@@ -75,15 +75,15 @@
         </div>
       </div>
     </header>
-    <main class="flex gap-12 mt-32 mx-60">
-      <section>
+    <main class="flex flex-col lg:flex-row gap-12 mt-32 mx-10 xl:mx-32 2xl:mx-60">
+      <section >
         <!-- KitchenWare Section -->
-        <section>
+        <section >
           <h1 class="text-[40px] font-semibold text-primaryColor">
             Kitchenware
           </h1>
           <div>
-            <div class="grid gap-6 grid-cols-3">
+            <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
               <!-- K. Accessories 1-->
 
               <div onclick="calculateAllPrice(this)" class="card w-auto bg-[#FFFFFF] rounded-lg shadow-md">
@@ -91,7 +91,7 @@
                   <img
                     src="./images/prod1.png"
                     alt="K.Accessories"
-                    class="rounded-xl px-12"
+                    class="rounded-xl "
                   />
                 </figure>
                 <div class="card-body items-center text-center">
@@ -137,7 +137,7 @@
                   <img
                     src="./images/prod2.png"
                     alt="K.Accessories"
-                    class="rounded-xl"
+                    class="rounded-xl py-4"
                   />
                 </figure>
                 <div class="card-body items-center text-center">
@@ -183,7 +183,7 @@
                   <img
                     src="./images/prod3.png"
                     alt="K.Accessories"
-                    class="rounded-xl"
+                    class="rounded-xl py-4"
                   />
                 </figure>
                 <div class="card-body items-center text-center">
@@ -232,7 +232,7 @@
             Sportswear
           </h1>
           <div>
-            <div class="grid gap-6 grid-cols-3">
+            <div  class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
               <!-- sports Accessories 1-->
 
               <div onclick="calculateAllPrice(this)" class="card w-auto bg-[#FFFFFF] rounded-lg shadow-md">
@@ -240,7 +240,7 @@
                   <img
                     src="./images/prod4.png"
                     alt="K.Accessories"
-                    class="rounded-xl px-12"
+                    class="rounded-xl py-6"
                   />
                 </figure>
                 <div class="card-body items-center text-center">
@@ -381,7 +381,7 @@
             Furniture
           </h1>
           <div>
-            <div class="grid gap-6 grid-cols-3">
+            <div  class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
               <!-- sports Accessories 1-->
 
               <div onclick="calculateAllPrice(this)" class="card w-auto bg-[#FFFFFF] rounded-lg shadow-md">
@@ -389,7 +389,7 @@
                   <img
                     src="./images/prod7.png"
                     alt="K.Accessories"
-                    class="px-12"
+                    class="pb-4"
                   />
                 </figure>
                 <div class="card-body items-center text-center">
@@ -526,12 +526,12 @@
         </section>
       </section>
       <!-- Calculation section -->
-      <section class="w-96 flex flex-col gap-7 items-start">
+      <section class="text-primaryColor font-medium w-96 flex flex-col gap-7 items-center xl:items-start">
         <div class=" pt-16">
-          <p>Have coupon?</p>
+          <p class="text-2xl">Have coupon?</p>
           <div class="flex  mt-4">
-            <input class="pl-4 border w-36" type="text" placeholder="Coupon code " />
-            <button disabled class="btn bg-btnColor normal-case font-semibold text-white rounded-r-2xl rounded-l-none">Apply</button>
+            <input id="InputField"  oninput="InputValue()" class="pl-4 border w-36" type="text" placeholder="Coupon code " />
+            <button id="coupon-btn" disabled class="btn bg-btnColor normal-case font-semibold text-white rounded-r-2xl rounded-l-none">Apply</button>
           </div>
         </div>
         <div>
@@ -539,7 +539,7 @@
             <div id="NameInput"></div>
             <div class="mt-5" id="PriceInput"></div>
           </div>
-          <button
+          <button id="btn-id"
             disabled
             class="btn normal-case bg-btnColor font-semibold text-white w-full px-[72px] mt-12"
           >
