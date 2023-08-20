@@ -43,7 +43,7 @@
       }
     </style>
   </head>
-  <body class="font-sans justify-cente  items-center w-full mx-auto">
+  <body class="font-sans justify-cente items-center w-full mx-auto">
     <!-- Header Section or 20% off Section -->
     <header class="bg-[#F9F6E2] justify-center w-full mx-auto">
       <div
@@ -76,11 +76,11 @@
       </div>
     </header>
     <main
-      class="flex flex-col justify-center pb-10 lg:flex-row gap-12 mt-32 mx-10 xl:mx-32 2xl:mx-60"
+      class="flex flex-col-reverse justify-around pb-10 lg:flex-row gap-12 mt-32 mx-10 xl:mx-32 2xl:mx-60"
     >
-      <section class="grid  gap-14">
+      <section class="grid gap-14">
         <!-- KitchenWare Section -->
-        <section ">
+        <section>
           <h1 class="text-[40px] font-semibold text-primaryColor">
             Kitchenware
           </h1>
@@ -90,7 +90,7 @@
 
               <div
                 onclick="calculateAllPrice(this)"
-                class="card w-auto bg-[#FFFFFF] rounded-lg shadow-md"
+                class="card w-auto 2xl:w-96 bg-[#FFFFFF] rounded-lg shadow-md"
               >
                 <figure class="px-10 m-5 py-14 bg-[#1111110D]">
                   <img
@@ -238,7 +238,7 @@
           </div>
         </section>
         <!-- SportsWare Section -->
-        <section >
+        <section>
           <h1 class="text-[40px] font-semibold text-primaryColor">
             Sportswear
           </h1>
@@ -553,15 +553,15 @@
       </section>
       <!-- Calculation section -->
       <section
-        class="text-primaryColor pb-14 font-medium w-96 flex flex-col gap-7 items-center xl:items-start "
+        class="shopingSummery text-center text-primaryColor pb-14 font-medium md:w-[30vw] lg:w-[25vw] py-[50px] h-[100%] lg:sticky top-2 bottom-0"
       >
         <div class="pt-16">
           <p class="text-2xl">Have coupon?</p>
-          <div class="flex mt-4">
+          <div class="flex mt-4 items-center justify-center">
             <input
               id="InputField"
               oninput="InputValue()"
-              class="pl-4 border w-36"
+              class="pl-4 border py-3 w-36"
               type="text"
               placeholder="Coupon code "
             />
@@ -578,21 +578,27 @@
           <div class="px-4">
             <div id="NameInput"></div>
             <div class="mt-5 grid gap-4">
-              <p class="text-primaryColor text-2xl font-medium">
+              <p class="text-primaryColor text-xl xl:text-2xl font-medium">
                 Total Price:
-                <span class="text-[#11111180] text-2xl" id="PriceInput"
+                <span
+                  class="text-[#11111180] text-xl xl:text-2xl"
+                  id="PriceInput"
                   >00.00 TK</span
                 >
               </p>
-              <p class="text-primaryColor text-2xl font-medium">
+              <p class="text-primaryColor text-xl xl:text-2xl font-medium">
                 Discount:
-                <span class="text-[#11111180] text-2xl" id="DiscountPrice"
+                <span
+                  class="text-[#11111180] text-xl xl:text-2xl"
+                  id="DiscountPrice"
                   >00.00<span> TK</span></span
                 >
               </p>
-              <p class="text-primaryColor text-2xl font-medium">
+              <p class="text-primaryColor text-xl xl:text-2xl font-medium">
                 Total:
-                <span class="text-[#11111180] text-2xl" id="TotalPrice"
+                <span
+                  class="text-[#11111180] text-xl xl:text-2xl"
+                  id="TotalPrice"
                   >00.00<span> TK</span></span
                 >
               </p>
@@ -601,7 +607,7 @@
           <button
             id="PurchaseBtn"
             disabled
-            class="btn normal-case bg-btnColor font-semibold text-white w-full px-[72px] mt-12"
+            class="btn normal-case bg-btnColor font-semibold text-white px-[72px] mt-12"
             onclick="my_modal_5.showModal()"
           >
             Make Purchase
